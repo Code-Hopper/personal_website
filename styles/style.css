@@ -1,0 +1,72 @@
+/* theme for website */
+/* gobal css */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-1: #0C0C0C;
+    --color-2: #481E14;
+    --color-3: #9B3922;
+    --color-4: #F2613F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+body {
+    min-height: 2000px;
+}
+
+/* end of gobal css */
+
+/* contact navbar start */
+
+.navbar-contact-text {
+    color: var(--color-4);
+}
+
+/* contact navbar ends */
+
+/* main navbar starts */
+
+.main-navbar-logo {
+    color: var(--color-1) !important;
+}
+
+.main-navbar-cta {
+    background-color: var(--color-1);
+    font-weight: bold;
+    border-radius: 24px;
+}
+
+.main-navbar-cta .nav-link {
+    color: var(--color-4) !important;
+}
+
+.navbar-nav .nav-link {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(-45deg,var(--color-4) 50%,var(--color-1) 50%);
+    transition:all 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover::before{
+    width: 100%;
+} 
+
+/* main navbar ends */
