@@ -11,7 +11,7 @@
     <script src="./vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="./vendors/fontawesome-free-6.5.2/fontawesome-free-6.5.2-web/css/all.css">
@@ -21,7 +21,7 @@
 <body>
     <!-- responsive navbar using bootstrap -->
     <!-- contact navbar -->
-    <div class="container-fluid bg-black py-1 d-none d-md-block">
+    <div class="container-fluid bg-black py-1 d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col navbar-contact-text">
@@ -37,34 +37,99 @@
         </div>
     </div>
     <!-- main navbar -->
-    <nav class="navbar navbar-expand-md bg-white navbar-light shadow position-sticky top-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow position-sticky top-0">
         <div class="container">
             <!-- main navbar logo -->
             <span class="main-navbar-logo navbar-brand fw-bold fs-3">Code-Hopper</span>
 
+            <!-- mobile and tablet main menu trigger -->
+
+            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mtmm">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
             <!-- main navbar menu -->
-            <ul class="navbar-nav ms-auto fw-medium align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Testimonial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Contact</a>
-                </li>
-                <li class="nav-item main-navbar-cta px-2 py-1">
-                    <a class="nav-link" href="">Hire Me !</a>
-                </li>
-            </ul>
+            <div class="navbar-collpase offcanvas offcanvas-end" data-bs-backdrop="static" id="mtmm">
+                <div class="offcanvas-body">
+
+                    <button class="btn btn-close d-lg-none" data-bs-dismiss="offcanvas"> </button>
+
+                    <ul class="navbar-nav ms-auto fw-medium align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contact</a>
+                        </li>
+                        <li class="nav-item main-navbar-cta px-2 py-1">
+                            <a class="nav-link" href="">Hire Me !</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
+
+    <!-- mobile menu(display only on mobile and tablets) -->
+
+    <div class="w-100 d-lg-none mobile-menu-special">
+        <div class="mobile-menu-icon-container">
+            <div class="mobile-menu-icon">
+                <a href="tel:+91 9226371131"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href="https://wa.me/919226371131"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="mobile-menu-icon testimonial-trigger">
+                <i class="fa-solid fa-home fa-2x"></i>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href="/"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- heros sections -->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col py-5">
+                    <!-- Normal Text Intro -->
+                    <h4 class="">
+                        I'm a MERN Stack Web Developer
+                    </h4>
+                    <span>JavaScript for life !</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum asperiores iste modi quidem itaque facilis eius, pariatur eaque maxime placeat ex eveniet rem totam deserunt quas ipsa dolorum quia aut officia molestiae accusantium cum laboriosam! Nihil minima libero minus animi error facere cum laborum, aliquam tempora molestiae, nam magnam!
+                    </p>
+                    <div class="">
+                        <p>contact for project</p>
+                        <button class="btn btn-dark">
+                            Let's Get Started !
+                        </button>
+                    </div>
+                </div>
+                <div class="rotate-text-container col py-5 position-relative">
+                    <!-- spinning text animation -->
+                    <h5 class="position-relative" id="hero-rotate-text">| Web Developer | App Development | Digital Marketing &nbsp;</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
