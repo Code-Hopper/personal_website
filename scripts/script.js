@@ -1,3 +1,7 @@
+AOS.init({
+    duration: 1000
+})
+
 const rotateTextFunction = () => {
     const text = document.querySelector('#hero-rotate-text');
     if (text) {

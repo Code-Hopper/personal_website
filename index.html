@@ -16,6 +16,9 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="./vendors/fontawesome-free-6.5.2/fontawesome-free-6.5.2-web/css/all.css">
 
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -37,7 +40,7 @@
         </div>
     </div>
     <!-- main navbar -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow position-sticky top-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow position-sticky top-0 z-3">
         <div class="container">
             <!-- main navbar logo -->
             <span class="main-navbar-logo navbar-brand fw-bold fs-3">Code-Hopper</span>
@@ -63,7 +66,12 @@
                             <a class="nav-link" href="">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Service</a>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Service</a>
+                                <ul class="dropdown-menu service-mega-menu">
+                                    <li class="dropdown-item">item 1</li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Testimonial</a>
@@ -104,30 +112,126 @@
 
     <!-- heros sections -->
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-black">
         <div class="container">
             <div class="row py-5">
-                <div class="col py-5">
+                <div class="col-12 col-lg-6 py-5" data-aos="fade-right">
                     <!-- Normal Text Intro -->
-                    <h4 class="">
-                        I'm a MERN Stack Web Developer
+                    <h4 class="text-white">
+                        I'm a Full Stack Web Developer
                     </h4>
-                    <span>JavaScript for life !</span>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum asperiores iste modi quidem itaque facilis eius, pariatur eaque maxime placeat ex eveniet rem totam deserunt quas ipsa dolorum quia aut officia molestiae accusantium cum laboriosam! Nihil minima libero minus animi error facere cum laborum, aliquam tempora molestiae, nam magnam!
-                    </p>
+                    <span class="fw-bold py-3 fs-5">
+                        <a style="color: var(--color-4);" href="https://github.com/Code-Hopper">GitHub@Code-hopper</a>
+                    </span>
+                    <div class="py-5 d-flex gap-3">
+                        <img class="img-fluid heros-intro-imgs" src="./media/js.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/node.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/react.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/bootstrap.png" alt="">
+                    </div>
                     <div class="">
-                        <p>contact for project</p>
-                        <button class="btn btn-dark">
+                        <p class="text-light">contact for project</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project-form-1">
                             Let's Get Started !
                         </button>
+                        <!-- pop-up form for starting project -->
+
+                        <div class="modal fade" id="project-form-1">
+                            <div class="modal-dialog bg-black">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Happy for a project 😊</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row gap-2">
+                                                <div class="col">
+                                                    <input type="text" placeholder="name" class="form-control">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="number" placeholder="phone" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="email" placeholder="email" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <select class="form-select" name="" id="">
+                                                        <option value="">Please Select Service</option>
+                                                        <option value="">Web Development</option>
+                                                        <option value="">Digital Marketing</option>
+                                                        <option value="">Mobile App Development</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <textarea class="form-control" rows="10"
+                                                        placeholder="message if any !" name="" id=""></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success">Submit <span
+                                                class="fa-solid fa-paper-plane"></span></button>
+                                        <button type="button" class="btn btn-danger"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="rotate-text-container col py-5 position-relative">
+                <div class="rotate-text-container col-12 col-lg-6 py-5" data-aos="zoom-in">
                     <!-- spinning text animation -->
-                    <h5 class="position-relative" id="hero-rotate-text">| Web Developer | App Development | Digital Marketing &nbsp;</h5>
+                    <h5 class="position-relative text-white fw-bold" id="hero-rotate-text">| Web Developer | App
+                        Development | Digital Marketing &nbsp;</h5>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- perks -->
+
+
+    <!-- footer -->
+
+    <div class="container-fluid bg-black mt-5 pt-5 pb-2">
+        <div class="container">
+            <div class="row flex-column flex-lg-row">
+                <div class="col">
+                    <span class="navbar-brand fw-bold fs-3 text-light">Code-Hopper</span>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In earum veniam aliquid! Iusto
+                        voluptate nisi laborum nulla expedita veritatis deleniti quasi officia quo, labore laboriosam
+                        minus! Quos possimus ex expedita impedit cupiditate magnam quae atque aliquid veritatis ratione
+                        praesentium repellendus, recusandae assumenda beatae, perferendis pariatur voluptatibus! Quam
+                        iste rerum consequatur.
+                    </p>
+                </div>
+                <div class="col">
+                    <span class="fs-3 text-light">Quick Links</span>
+                    <ul class="footer-links">
+                        <li>Home</li>
+                        <li>Contact</li>
+                        <li>Project</li>
+                        <li>Learn More</li>
+                        <li>Hire Me !</li>
+                        <li>Testimonials</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <iframe class="w-100 h-100" style="min-height:250px"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905779846!2d78.9901093829612!3d21.16106590253875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716864911449!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="end-credits text-center py-2 fw-semibold">
+            All Right Reserved &copy; Made By Code-Hopper
         </div>
     </div>
 
@@ -135,6 +239,8 @@
 
 <!-- JQuery -->
 <script type="text/JavaScript" src="./vendors/jquery-3.7.1.min.js"></script>
+
+<script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <!-- custom js -->
 <script src="./scripts/script.js"></script>
