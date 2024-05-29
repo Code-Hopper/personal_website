@@ -19,6 +19,31 @@
     <!-- AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <style>
+        .about-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 150px);
+            gap: 1.25rem;
+        }
+
+        .about-grid-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .about-number{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .about-context{
+
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -192,6 +217,54 @@
     </div>
 
     <!-- perks -->
+
+    <div class="container-fluid" data-aos="fade-down">
+        <div class="row">
+            <div class="col bg-info py-2 text-center">
+                <span class="fw-bold fs-4">Web Development</span>
+            </div>
+            <div class="col bg-danger py-2 text-center">
+                <span class="fw-bold fs-4">App Development</span>
+            </div>
+            <div class="col bg-warning py-2 text-center">
+                <span class="fw-bold fs-4">Digital Marketing</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- about us section -->
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- numbers -->
+                    <div class="about-numbers-grid">
+                        <div class="shadow-lg about-grid-child bg-dark text-light">
+                            <span class="about-number"  data-number="100"> 100+</span>
+                            <span class="about-context">Projects Completed</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child bg-dark text-light">
+                            <span class="about-number"  data-number="20">20+</span>
+                            <span class="about-context">Programming Languages</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child bg-dark text-light" >
+                            <span class="about-number" data-number="1000">1000+</span>
+                            <span class="about-context">Hours Of Coding</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child" >
+                            <span class="about-number" data-number="450">450+</span>
+                            <span class="about-context">Connections</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- about text data -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- footer -->
