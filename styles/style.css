@@ -60,16 +60,15 @@
     background: linear-gradient(-45deg, var(--color-4) 50%, var(--color-1) 50%);
     transition: all 0.5s ease;
 }
-    
+
 .navbar-nav .nav-link:hover::before {
     width: 100%;
 }
 
-.service-mega-menu{
+.service-mega-menu {
 
     width: 500px;
-    height:230px
-    
+    height: 230px
 }
 
 /* main navbar ends */
@@ -123,7 +122,9 @@
 /* rotate animation */
 
 .rotate-text-container {
-    position: static;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     animation: rotateText 10s linear infinite;
 }
 
@@ -144,11 +145,11 @@
 @keyframes rotateText {
 
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%,-50%) rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%,-50%) rotate(360deg);
     }
 
 }
@@ -173,11 +174,11 @@
 .footer-links li {
     position: relative;
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .footer-links li::before {
     content: '\f101';
-    font-family:'FontAwesome';
+    font-family: 'FontAwesome';
     color: var(--bs-danger);
 }

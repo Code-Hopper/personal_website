@@ -34,7 +34,7 @@ let start = 0
 
 let maxEnd = 0
 
-let time = 1000
+let time = 10
 
 
 for (let child of aboutNumbersGridChilds) {
@@ -49,35 +49,23 @@ for (let child of aboutNumbersGridChilds) {
 
 let adjustedTime = Math.round(maxEnd/time)
 
-// relative time
-// in relation to the max value
-
-
-for(let child of aboutNumbersGridChilds){
-    startCounter(child,Number(child.dataset.number))
+// Start counting
+for (let child of aboutNumbersGridChilds) {
+    let end = Number(child.dataset.number);
+    let ratio = end / maxEnd;
+    let adjustedTime = Math.round(time / ratio);
+    startCounter(child, end, adjustedTime);
 }
 
-function startCounter(target,end) {
-
-    let count = 0
-
-    console.log(end)
-
+function startCounter(target, end, intervalTime) {
+    let count = 0;
     let countInterval = setInterval(() => {
-
         if (count <= end) {
-
-            target.innerHTML = `${count}+`
-
-            // console.log(target)
-
-            count++
-
+            target.innerHTML = `${count}+`;
+            count++;
         } else {
-            clearInterval(countInterval)
+            clearInterval(countInterval);
         }
-
-    }, adjustedTime)
+    }, intervalTime);
 }
-
 // startCounter()

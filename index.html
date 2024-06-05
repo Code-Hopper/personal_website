@@ -11,7 +11,7 @@
     <script src="./vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="./vendors/fontawesome-free-6.5.2/fontawesome-free-6.5.2-web/css/all.css">
@@ -34,11 +34,19 @@
             flex-direction: column;
         }
 
-        .about-number{
+        .about-number {
             font-size: 2rem;
             font-weight: bold;
         }
-        .about-context{
+
+        @media screen and (max-width:990px){
+
+            .about-numbers-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, 150px);
+                gap: 1.25rem;
+            }
 
         }
 
@@ -159,74 +167,31 @@
                         <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project-form-1">
                             Let's Get Started !
                         </button>
-                        <!-- pop-up form for starting project -->
-
-                        <div class="modal fade" id="project-form-1">
-                            <div class="modal-dialog bg-black">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Happy for a project 😊</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="">
-                                            <div class="row gap-2">
-                                                <div class="col">
-                                                    <input type="text" placeholder="name" class="form-control">
-                                                </div>
-                                                <div class="col">
-                                                    <input type="number" placeholder="phone" class="form-control">
-                                                </div>
-                                                <div class="col-12">
-                                                    <input type="email" placeholder="email" class="form-control">
-                                                </div>
-                                                <div class="col-12">
-                                                    <select class="form-select" name="" id="">
-                                                        <option value="">Please Select Service</option>
-                                                        <option value="">Web Development</option>
-                                                        <option value="">Digital Marketing</option>
-                                                        <option value="">Mobile App Development</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col">
-                                                    <textarea class="form-control" rows="10"
-                                                        placeholder="message if any !" name="" id=""></textarea>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success">Submit <span
-                                                class="fa-solid fa-paper-plane"></span></button>
-                                        <button type="button" class="btn btn-danger"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="rotate-text-container col-12 col-lg-6 py-5" data-aos="zoom-in">
-                    <!-- spinning text animation -->
-                    <h5 class="position-relative text-white fw-bold" id="hero-rotate-text">| Web Developer | App
-                        Development | Digital Marketing &nbsp;</h5>
+                <div class="col-12 col-lg-6 position-relative" style="min-height: 350px; overflow:hidden;">
+                    <div class="rotate-text-container w-100" style="height: 300px;">
+                        <!-- spinning text animation -->
+                        <h5 class="position-relative text-white fw-bold" id="hero-rotate-text">| Web Developer | App
+                            Development | Digital Marketing &nbsp;</h5>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <!-- perks -->
 
-    <div class="container-fluid" data-aos="fade-down">
-        <div class="row">
-            <div class="col bg-info py-2 text-center">
+    <div class="container-fluid">
+        <div class="row flex-lg-row flex-column">
+            <div class="col bg-info py-2 text-center" data-aos="fade-right">
                 <span class="fw-bold fs-4">Web Development</span>
             </div>
-            <div class="col bg-danger py-2 text-center">
+            <div class="col bg-danger py-2 text-center" data-aos="fade">
                 <span class="fw-bold fs-4">App Development</span>
             </div>
-            <div class="col bg-warning py-2 text-center">
+            <div class="col bg-warning py-2 text-center" data-aos="fade-left">
                 <span class="fw-bold fs-4">Digital Marketing</span>
             </div>
 
@@ -235,32 +200,36 @@
 
     <!-- about us section -->
 
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" data-aos="fade-in">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-lg-6">
                     <!-- numbers -->
                     <div class="about-numbers-grid">
                         <div class="shadow-lg about-grid-child bg-dark text-light">
-                            <span class="about-number"  data-number="100"> 100+</span>
+                            <span class="about-number" data-number="100"> 100+</span>
                             <span class="about-context">Projects Completed</span>
                         </div>
                         <div class="shadow-lg about-grid-child bg-dark text-light">
-                            <span class="about-number"  data-number="20">20+</span>
+                            <span class="about-number" data-number="20">20+</span>
                             <span class="about-context">Programming Languages</span>
                         </div>
-                        <div class="shadow-lg about-grid-child bg-dark text-light" >
+                        <div class="shadow-lg about-grid-child bg-dark text-light">
                             <span class="about-number" data-number="1000">1000+</span>
                             <span class="about-context">Hours Of Coding</span>
                         </div>
-                        <div class="shadow-lg about-grid-child" >
+                        <div class="shadow-lg about-grid-child">
                             <span class="about-number" data-number="450">450+</span>
                             <span class="about-context">Connections</span>
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-lg-6 my-5 my-lg-0">
                     <!-- about text data -->
+                    <h4>About Code Hopper</h4>
+                    <span class="fw-bolder text-danger">-web developer</span>
+                    <p class="text-secondary my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore similique laboriosam est molestias quaerat veritatis distinctio quas, soluta tempora impedit, nemo in totam. Sequi officia, commodi quam labore quaerat repudiandae, unde, doloremque laudantium tempora dolor ex culpa? Corrupti rem eos minus voluptates laudantium, laborum animi!</p>
+                    <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#project-form-1">Hire Me !</button>
                 </div>
             </div>
         </div>
@@ -305,6 +274,54 @@
     <div class="container-fluid">
         <div class="end-credits text-center py-2 fw-semibold">
             All Right Reserved &copy; Made By Code-Hopper
+        </div>
+    </div>
+
+
+    <!-- all modals -->
+
+    <div class="modal fade" id="project-form-1">
+        <div class="modal-dialog bg-black">
+            <div class="modal-content z-3">
+                <div class="modal-header">
+                    <h5 class="modal-title">Happy for a project 😊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row gap-2">
+                            <div class="col">
+                                <input type="text" placeholder="name" class="form-control">
+                            </div>
+                            <div class="col">
+                                <input type="number" placeholder="phone" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" placeholder="email" class="form-control">
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select" name="" id="">
+                                    <option value="">Please Select Service</option>
+                                    <option value="">Web Development</option>
+                                    <option value="">Digital Marketing</option>
+                                    <option value="">Mobile App Development</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <textarea class="form-control" rows="10"
+                                    placeholder="message if any !" name="" id=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Submit <span
+                            class="fa-solid fa-paper-plane"></span></button>
+                    <button type="button" class="btn btn-danger"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
